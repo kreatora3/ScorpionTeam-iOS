@@ -35,6 +35,7 @@
 		84A4B74C1A0CBD16003C7E5C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A4B7421A0CBD15003C7E5C /* Security.framework */; };
 		84A4B74D1A0CBD16003C7E5C /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A4B7431A0CBD15003C7E5C /* StoreKit.framework */; };
 		84A4B74E1A0CBD16003C7E5C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A4B7441A0CBD16003C7E5C /* SystemConfiguration.framework */; };
+		84A6940E1A0D88AC00E00155 /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A6940D1A0D88AC00E00155 /* Store.m */; };
 		84FB602B1A0CF7E900D86407 /* TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FB60271A0CF7E900D86407 /* TableView.m */; };
 		84FB602C1A0CF7E900D86407 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FB60291A0CF7E900D86407 /* TableViewCell.m */; };
 		84FB602D1A0CF7E900D86407 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84FB602A1A0CF7E900D86407 /* TableViewCell.xib */; };
@@ -90,6 +91,8 @@
 		84A4B7421A0CBD15003C7E5C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		84A4B7431A0CBD15003C7E5C /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		84A4B7441A0CBD16003C7E5C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		84A6940C1A0D88AC00E00155 /* Store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Store.h; sourceTree = "<group>"; };
+		84A6940D1A0D88AC00E00155 /* Store.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Store.m; sourceTree = "<group>"; };
 		84FB60261A0CF7E900D86407 /* TableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableView.h; sourceTree = SOURCE_ROOT; };
 		84FB60271A0CF7E900D86407 /* TableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableView.m; sourceTree = SOURCE_ROOT; };
 		84FB60281A0CF7E900D86407 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = SOURCE_ROOT; };
@@ -224,13 +227,12 @@
 		84A4B7501A0CBE50003C7E5C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
 				84A10AA61A0D0ECA00B527B3 /* Item.h */,
 				84A10AA71A0D0ECA00B527B3 /* Item.m */,
-=======
 				84105B131A0D1A6F008B646D /* ImageWithTitle.h */,
 				84105B141A0D1A6F008B646D /* ImageWithTitle.m */,
->>>>>>> FETCH_HEAD
+				84A6940C1A0D88AC00E00155 /* Store.h */,
+				84A6940D1A0D88AC00E00155 /* Store.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -356,12 +358,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
 				84A10AA81A0D0ECA00B527B3 /* Item.m in Sources */,
-=======
 				84105B151A0D1A6F008B646D /* ImageWithTitle.m in Sources */,
->>>>>>> FETCH_HEAD
 				84A4B7121A0CBBB9003C7E5C /* AppDelegate.m in Sources */,
+				84A6940E1A0D88AC00E00155 /* Store.m in Sources */,
 				84105B121A0CFE2D008B646D /* RoomViewController.m in Sources */,
 				84A10AA51A0CD5EC00B527B3 /* RegisterViewController.m in Sources */,
 				84A4B7151A0CBBB9003C7E5C /* RoomDesigner.xcdatamodeld in Sources */,
