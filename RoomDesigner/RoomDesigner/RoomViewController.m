@@ -111,8 +111,18 @@ static NSString* cellIdentifier=@"TableViewCell";
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    ImageWithTitle* cellData=[_content objectAtIndex:indexPath.row];
     
-
+    
+    CGRect applicationFrame= CGRectMake (self.view.frame.origin.x, self.view.frame.origin.y,cellData.image.size.width/2, cellData.image.size.height/2);
+    
+    NSLog(@"%f",cellData.image.size.width);
+    UIImageView *contentView = [[UIImageView alloc] initWithFrame:applicationFrame];
+    contentView.image=cellData.image;
+    //self.view = contentView;
+    
+    //levelView = [[LevelView alloc] initWithFrame:applicationFrame viewController:self];
+    [self.view addSubview:contentView];
 }
 
 @end
