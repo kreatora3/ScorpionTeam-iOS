@@ -29,7 +29,11 @@ static NSString* cellIdentifier=@"TableViewCell";
     // Initialization code
     ImageWithTitle *image = [[ImageWithTitle alloc] init];
     image.name = @"John";
-    image.image.size.width=50;
+    UIImage* pic = [UIImage imageNamed:@"img1.jpeg"];
+    image.image=pic;
+    for(int i=0; i<10;i++){
+        [_content addObject:image];
+    }
     
     
     [self.table setDelegate:self];
@@ -98,7 +102,10 @@ static NSString* cellIdentifier=@"TableViewCell";
     TableViewCell *cell =[tableView dequeueReusableCellWithIdentifier:cellIdentifier ];
     NSLog(@"created");
     
-    cell.label.text = [_content objectAtIndex:indexPath.row];
+    //cell.label.text = [_content objectAtIndex:indexPath.row];
+    ImageWithTitle* cellData=[_content objectAtIndex:indexPath.row];
+    cell.label.text=cellData.name;
+    cell.productImage.image=cellData.image;
     
     return cell;
 }

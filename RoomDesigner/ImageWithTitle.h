@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ImageWithTitle : UIImageView
+@interface ImageWithTitle:UIImageView
 @property (weak, nonatomic) NSString* name;
 @end
