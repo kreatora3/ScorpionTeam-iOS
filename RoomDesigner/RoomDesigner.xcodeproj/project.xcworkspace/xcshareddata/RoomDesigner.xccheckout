@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>DDEBFDE0-940A-468C-B069-DB65FFFBE6FF</string>
+	<key>IDESourceControlProjectName</key>
+	<string>RoomDesigner</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>ADE68513558CFF364C440B69DF4AE8A834E2C657</key>
+		<string>https://github.com/kreatora3/ScorpionTeam-iOS.git</string>
+		<key>C44E62E2AF61086781F9BE377C113BB433925908</key>
+		<string>github.com:kreatora3/ObjectiveC-.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>RoomDesigner/RoomDesigner.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>ADE68513558CFF364C440B69DF4AE8A834E2C657</key>
+		<string>../../..</string>
+		<key>C44E62E2AF61086781F9BE377C113BB433925908</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/kreatora3/ScorpionTeam-iOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>ADE68513558CFF364C440B69DF4AE8A834E2C657</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C44E62E2AF61086781F9BE377C113BB433925908</string>
+			<key>IDESourceControlWCCName</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>ADE68513558CFF364C440B69DF4AE8A834E2C657</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ScorpionTeamwork</string>
+		</dict>
+	</array>
+</dict>
+</plist>
