@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		84105B121A0CFE2D008B646D /* RoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84105B111A0CFE2D008B646D /* RoomViewController.m */; };
+		84105B151A0D1A6F008B646D /* ImageWithTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = 84105B141A0D1A6F008B646D /* ImageWithTitle.m */; };
 		84A10AA21A0CD13E00B527B3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A10AA11A0CD13E00B527B3 /* LoginViewController.m */; };
 		84A10AA51A0CD5EC00B527B3 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A10AA41A0CD5EC00B527B3 /* RegisterViewController.m */; };
 		84A4B70F1A0CBBB9003C7E5C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A4B70E1A0CBBB9003C7E5C /* main.m */; };
@@ -49,6 +50,8 @@
 /* Begin PBXFileReference section */
 		84105B101A0CFE2D008B646D /* RoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoomViewController.h; path = RoomDesigner/RoomViewController.h; sourceTree = "<group>"; };
 		84105B111A0CFE2D008B646D /* RoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RoomViewController.m; path = RoomDesigner/RoomViewController.m; sourceTree = "<group>"; };
+		84105B131A0D1A6F008B646D /* ImageWithTitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageWithTitle.h; sourceTree = "<group>"; };
+		84105B141A0D1A6F008B646D /* ImageWithTitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageWithTitle.m; sourceTree = "<group>"; };
 		84A10AA01A0CD13E00B527B3 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		84A10AA11A0CD13E00B527B3 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		84A10AA31A0CD5EC00B527B3 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
@@ -204,6 +207,8 @@
 		84A4B7501A0CBE50003C7E5C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				84105B131A0D1A6F008B646D /* ImageWithTitle.h */,
+				84105B141A0D1A6F008B646D /* ImageWithTitle.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -327,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84105B151A0D1A6F008B646D /* ImageWithTitle.m in Sources */,
 				84A4B7121A0CBBB9003C7E5C /* AppDelegate.m in Sources */,
 				84105B121A0CFE2D008B646D /* RoomViewController.m in Sources */,
 				84A10AA51A0CD5EC00B527B3 /* RegisterViewController.m in Sources */,

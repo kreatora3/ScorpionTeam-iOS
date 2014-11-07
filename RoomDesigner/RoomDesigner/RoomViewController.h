@@ -10,9 +10,11 @@
 #import "TableView.h"
 
 @interface RoomViewController : UIViewController
-@property (strong, nonatomic) IBOutlet TableView *table;
+@property (nonatomic, strong)NSMutableArray *content;
+@property (strong, nonatomic) IBOutlet UITableView *table;
 @property (strong, nonatomic) IBOutlet UIImageView *image;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *sampler;
+@property (strong,nonatomic) NSMutableArray *furnitureImages;
 - (IBAction)sample:(id)sender;
 
 @end
