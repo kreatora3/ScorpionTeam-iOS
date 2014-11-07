@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		84105B121A0CFE2D008B646D /* RoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84105B111A0CFE2D008B646D /* RoomViewController.m */; };
+		84105B151A0D1A6F008B646D /* ImageWithTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = 84105B141A0D1A6F008B646D /* ImageWithTitle.m */; };
+		84105B191A0D1DD5008B646D /* img1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 84105B171A0D1DD5008B646D /* img1.jpeg */; };
+		84105B1A1A0D1DD5008B646D /* img2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 84105B181A0D1DD5008B646D /* img2.jpeg */; };
 		84A10AA21A0CD13E00B527B3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A10AA11A0CD13E00B527B3 /* LoginViewController.m */; };
 		84A10AA51A0CD5EC00B527B3 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A10AA41A0CD5EC00B527B3 /* RegisterViewController.m */; };
 		84A10AA81A0D0ECA00B527B3 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A10AA71A0D0ECA00B527B3 /* Item.m */; };
@@ -50,6 +53,10 @@
 /* Begin PBXFileReference section */
 		84105B101A0CFE2D008B646D /* RoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoomViewController.h; path = RoomDesigner/RoomViewController.h; sourceTree = "<group>"; };
 		84105B111A0CFE2D008B646D /* RoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RoomViewController.m; path = RoomDesigner/RoomViewController.m; sourceTree = "<group>"; };
+		84105B131A0D1A6F008B646D /* ImageWithTitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageWithTitle.h; sourceTree = "<group>"; };
+		84105B141A0D1A6F008B646D /* ImageWithTitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageWithTitle.m; sourceTree = "<group>"; };
+		84105B171A0D1DD5008B646D /* img1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img1.jpeg; sourceTree = "<group>"; };
+		84105B181A0D1DD5008B646D /* img2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img2.jpeg; sourceTree = "<group>"; };
 		84A10AA01A0CD13E00B527B3 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		84A10AA11A0CD13E00B527B3 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		84A10AA31A0CD5EC00B527B3 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
@@ -121,6 +128,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84105B161A0D1DD5008B646D /* images */ = {
+			isa = PBXGroup;
+			children = (
+				84105B171A0D1DD5008B646D /* img1.jpeg */,
+				84105B181A0D1DD5008B646D /* img2.jpeg */,
+			);
+			path = images;
+			sourceTree = SOURCE_ROOT;
+		};
 		84A4B7001A0CBBB9003C7E5C = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +177,7 @@
 		84A4B70C1A0CBBB9003C7E5C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				84105B161A0D1DD5008B646D /* images */,
 				84A4B70D1A0CBBB9003C7E5C /* Info.plist */,
 				84A4B70E1A0CBBB9003C7E5C /* main.m */,
 			);
@@ -207,8 +224,13 @@
 		84A4B7501A0CBE50003C7E5C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				84A10AA61A0D0ECA00B527B3 /* Item.h */,
 				84A10AA71A0D0ECA00B527B3 /* Item.m */,
+=======
+				84105B131A0D1A6F008B646D /* ImageWithTitle.h */,
+				84105B141A0D1A6F008B646D /* ImageWithTitle.m */,
+>>>>>>> FETCH_HEAD
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -311,7 +333,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84105B191A0D1DD5008B646D /* img1.jpeg in Resources */,
 				84A4B71B1A0CBBBA003C7E5C /* Main.storyboard in Resources */,
+				84105B1A1A0D1DD5008B646D /* img2.jpeg in Resources */,
 				84FB602D1A0CF7E900D86407 /* TableViewCell.xib in Resources */,
 				84A4B7201A0CBBBA003C7E5C /* LaunchScreen.xib in Resources */,
 				84A4B71D1A0CBBBA003C7E5C /* Images.xcassets in Resources */,
@@ -332,7 +356,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
 				84A10AA81A0D0ECA00B527B3 /* Item.m in Sources */,
+=======
+				84105B151A0D1A6F008B646D /* ImageWithTitle.m in Sources */,
+>>>>>>> FETCH_HEAD
 				84A4B7121A0CBBB9003C7E5C /* AppDelegate.m in Sources */,
 				84105B121A0CFE2D008B646D /* RoomViewController.m in Sources */,
 				84A10AA51A0CD5EC00B527B3 /* RegisterViewController.m in Sources */,

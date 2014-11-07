@@ -15,27 +15,27 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rx6-Ej-0v7">
-                        <rect key="frame" x="289" y="20" width="90" height="45"/>
+                        <rect key="frame" x="290" y="23" width="90" height="45"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="90" id="Fds-Bq-kx0"/>
+                            <constraint firstAttribute="width" constant="90" id="LIr-Fa-v55"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tVK-Fd-qrm">
-                        <rect key="frame" x="75" y="0.0" width="124" height="86"/>
+                        <rect key="frame" x="75" y="2" width="124" height="86"/>
                         <color key="backgroundColor" red="1" green="0.82068499660000005" blue="0.9836571462" alpha="1" colorSpace="calibratedRGB"/>
                     </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="tVK-Fd-qrm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="67" id="6Zk-de-WEQ"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="rx6-Ej-0v7" secondAttribute="trailing" constant="46" id="CC7-7h-6AO"/>
-                    <constraint firstItem="rx6-Ej-0v7" firstAttribute="leading" secondItem="tVK-Fd-qrm" secondAttribute="trailing" constant="90" id="OE3-1N-IUf"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="rx6-Ej-0v7" secondAttribute="bottom" constant="16" id="W3d-tm-nJ6"/>
-                    <constraint firstItem="tVK-Fd-qrm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="XQU-S7-pa2"/>
-                    <constraint firstItem="rx6-Ej-0v7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="12" id="aky-GK-TeO"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="tVK-Fd-qrm" secondAttribute="bottom" constant="-5" id="bdv-66-RSV"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="rx6-Ej-0v7" secondAttribute="trailing" constant="45" id="5GF-Sg-M40"/>
+                    <constraint firstItem="tVK-Fd-qrm" firstAttribute="centerY" secondItem="rx6-Ej-0v7" secondAttribute="centerY" id="AF8-mS-JfW"/>
+                    <constraint firstItem="rx6-Ej-0v7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="15" id="INI-zF-os5"/>
+                    <constraint firstItem="rx6-Ej-0v7" firstAttribute="leading" secondItem="tVK-Fd-qrm" secondAttribute="trailing" constant="91" id="Ny4-3y-aVI"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="rx6-Ej-0v7" secondAttribute="bottom" constant="13" id="SzR-Jy-S1b"/>
+                    <constraint firstItem="tVK-Fd-qrm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-6" id="X4J-GG-TvU"/>
+                    <constraint firstItem="tVK-Fd-qrm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="67" id="p0T-CO-uxx"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

@@ -7,15 +7,37 @@
 //
 
 #import "RoomViewController.h"
+#import "TableViewCell.h"
+#import "ImageWithTitle.h"
 
-@interface RoomViewController ()
+@interface RoomViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @end
 
 @implementation RoomViewController
 
+static NSString* cellIdentifier=@"TableViewCell";
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //_content = [[NSMutableArray alloc] initWithObjects:@"John",@"Ron",@"Don",@"Shawn",@"Ion",@"Gaston",@"Tron", nil];
+    _content=[[NSMutableArray alloc] init];
+    
+    _furnitureImages =[[NSMutableArray alloc] init];
+    UINib* nib = [UINib nibWithNibName:cellIdentifier bundle:nil];
+    [self.table registerNib:nib forCellReuseIdentifier:cellIdentifier];
+    // Initialization code
+    ImageWithTitle *image = [[ImageWithTitle alloc] init];
+    image.name = @"John";
+    UIImage* pic = [UIImage imageNamed:@"img1.jpeg"];
+    image.image=pic;
+    for(int i=0; i<10;i++){
+        [_content addObject:image];
+    }
+    
+    
+    [self.table setDelegate:self];
+    [self.table setDataSource:self];
     // Do any additional setup after loading the view.
 }
 
@@ -65,4 +87,59 @@
             }
     
 }
+
+- (IBAction)pan:(UIPanGestureRecognizer *)sender {
+    CGPoint location=[sender locationInView:self.view];
+
+    for (UIImageView *furniture in self.furnitureImages) {
+        CGRect rect= CGRectMake(furniture.frame.origin.x, furniture.frame.origin.y, furniture.frame.size.width, furniture.frame.size.height);
+        if(location.x>rect.origin.x&location.x<(rect.origin.x+rect.size.width)&location.y>rect.origin.y&location.y<(rect.origin.y+rect.size.height)){
+            
+            CGRect newLocation= CGRectMake(location.x-rect.size.width/2, location.y-rect.size.height/2, rect.size.width, rect.size.height);
+            furniture.frame=newLocation;
+             NSLog(@"%f",location.x);
+        }
+    }
+   
+    
+}
+
+-(NSInteger) numberOfSections{
+    return 1;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return _content.count;
+}
+
+
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    TableViewCell *cell =[tableView dequeueReusableCellWithIdentifier:cellIdentifier ];
+    NSLog(@"created");
+    
+    //cell.label.text = [_content objectAtIndex:indexPath.row];
+    ImageWithTitle* cellData=[_content objectAtIndex:indexPath.row];
+    cell.label.text=cellData.name;
+    cell.productImage.image=cellData.image;
+    
+    return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    ImageWithTitle* cellData=[_content objectAtIndex:indexPath.row];
+    
+    
+    CGRect applicationFrame= CGRectMake (self.view.frame.origin.x, self.view.frame.origin.y,cellData.image.size.width/2, cellData.image.size.height/2);
+    
+    NSLog(@"%f",cellData.image.size.width);
+    UIImageView *contentView = [[UIImageView alloc] initWithFrame:applicationFrame];
+    contentView.image=cellData.image;
+    //self.view = contentView;
+    //levelView = [[LevelView alloc] initWithFrame:applicationFrame viewController:self];
+    [self.view addSubview:contentView];
+    [self.furnitureImages addObject:contentView];
+}
+
+
 @end
