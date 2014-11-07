@@ -34,4 +34,35 @@
 }
 */
 
+- (IBAction)sample:(id)sender {
+    if(_sampler.selectedSegmentIndex == 0)            // Checking which segment is selected using the segment index value
+        
+    {
+        //implement changing datasource for table
+        
+        self.view.backgroundColor = [UIColor redColor];          // Change the background color to red
+        
+    }
+    
+    else
+        
+        if(_sampler.selectedSegmentIndex == 1)
+            
+        {
+            //implement changing datasource for table
+            self.view.backgroundColor = [UIColor greenColor];
+            
+        }
+    
+        else
+            
+            if(_sampler.selectedSegmentIndex == 2)
+                
+            {
+                //implement changing datasource for table
+                self.view.backgroundColor = [UIColor blueColor];
+                
+            }
+    
+}
 @end

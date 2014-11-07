@@ -247,10 +247,10 @@
             </objects>
             <point key="canvasLocation" x="864.5" y="279.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Room View Controller-->
         <scene sceneID="EHH-Ia-lnR">
             <objects>
-                <viewController id="pp0-H3-QdQ" sceneMemberID="viewController">
+                <viewController id="pp0-H3-QdQ" customClass="RoomViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nYC-3O-8lx"/>
                         <viewControllerLayoutGuide type="bottom" id="EDZ-fZ-3jy"/>
@@ -296,6 +296,9 @@
                                         <include reference="s8N-o4-RoJ"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="sample:" destination="pp0-H3-QdQ" eventType="valueChanged" id="tC4-3O-KEa"/>
+                                </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97W-UT-30f">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -303,6 +306,9 @@
                                 <state key="normal" title="-->">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="12U-PU-Hov" kind="show" id="o6P-Kl-aba"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="rwG-Lc-FUw" customClass="TableView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -388,10 +394,32 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="image" destination="ot0-Gb-BnH" id="flC-Z4-q3z"/>
+                        <outlet property="sampler" destination="7kB-XC-f2i" id="hFK-OW-3Dk"/>
+                        <outlet property="table" destination="rwG-Lc-FUw" id="jfL-6X-JTT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D2f-UA-K8g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1262.5" y="279.375"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="mfR-zd-USX">
+            <objects>
+                <viewController id="12U-PU-Hov" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wWb-fr-rir"/>
+                        <viewControllerLayoutGuide type="bottom" id="fAS-e4-q2d"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5J7-M6-1gj">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x1q-xf-V7A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1694.5" y="279.375"/>
         </scene>
     </scenes>
 </document>
