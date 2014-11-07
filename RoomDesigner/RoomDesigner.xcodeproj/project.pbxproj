@@ -104,6 +104,8 @@
 		84A4B7001A0CBBB9003C7E5C = {
 			isa = PBXGroup;
 			children = (
+				84A4B7511A0CBE63003C7E5C /* ViewControllers */,
+				84A4B7501A0CBE50003C7E5C /* Models */,
 				84A4B74F1A0CBD27003C7E5C /* Frameworks */,
 				84A4B70B1A0CBBB9003C7E5C /* RoomDesigner */,
 				84A4B7281A0CBBBA003C7E5C /* RoomDesignerTests */,
@@ -180,6 +182,20 @@
 				84A4B7371A0CBC3B003C7E5C /* ParseFacebookUtils.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84A4B7501A0CBE50003C7E5C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		84A4B7511A0CBE63003C7E5C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
