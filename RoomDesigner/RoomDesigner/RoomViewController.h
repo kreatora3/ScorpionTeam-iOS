@@ -16,5 +16,6 @@
 @property (strong, nonatomic) IBOutlet UISegmentedControl *sampler;
 @property (strong,nonatomic) NSMutableArray *furnitureImages;
 - (IBAction)sample:(id)sender;
+- (IBAction)pan:(UIPanGestureRecognizer *)sender;
 
 @end

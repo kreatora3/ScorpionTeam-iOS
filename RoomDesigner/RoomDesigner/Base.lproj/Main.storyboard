@@ -262,6 +262,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ot0-Gb-BnH">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" red="0.96339583399999995" green="0.87564823859999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="4bh-Jw-uig"/>
                                 </constraints>
@@ -332,6 +333,7 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="ot0-Gb-BnH" firstAttribute="top" secondItem="vyK-zt-eVB" secondAttribute="topMargin" constant="9" id="4OV-E7-UTv"/>
                             <constraint firstItem="97W-UT-30f" firstAttribute="leading" secondItem="7kB-XC-f2i" secondAttribute="trailing" constant="38" id="9Hw-9T-yR0"/>
@@ -393,6 +395,9 @@
                                 <include reference="mRo-oN-3bC"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="abE-gq-QBj" appends="YES" id="YXy-Yy-kDi"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="image" destination="ot0-Gb-BnH" id="flC-Z4-q3z"/>
@@ -401,6 +406,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D2f-UA-K8g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="abE-gq-QBj">
+                    <connections>
+                        <action selector="pan:" destination="pp0-H3-QdQ" id="Lr7-SC-Gik"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1262.5" y="279.375"/>
         </scene>

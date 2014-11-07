@@ -88,6 +88,22 @@ static NSString* cellIdentifier=@"TableViewCell";
     
 }
 
+- (IBAction)pan:(UIPanGestureRecognizer *)sender {
+    CGPoint location=[sender locationInView:self.view];
+
+    for (UIImageView *furniture in self.furnitureImages) {
+        CGRect rect= CGRectMake(furniture.frame.origin.x, furniture.frame.origin.y, furniture.frame.size.width, furniture.frame.size.height);
+        if(location.x>rect.origin.x&location.x<(rect.origin.x+rect.size.width)&location.y>rect.origin.y&location.y<(rect.origin.y+rect.size.height)){
+            
+            CGRect newLocation= CGRectMake(location.x-rect.size.width/2, location.y-rect.size.height/2, rect.size.width, rect.size.height);
+            furniture.frame=newLocation;
+             NSLog(@"%f",location.x);
+        }
+    }
+   
+    
+}
+
 -(NSInteger) numberOfSections{
     return 1;
 }
@@ -120,9 +136,10 @@ static NSString* cellIdentifier=@"TableViewCell";
     UIImageView *contentView = [[UIImageView alloc] initWithFrame:applicationFrame];
     contentView.image=cellData.image;
     //self.view = contentView;
-    
     //levelView = [[LevelView alloc] initWithFrame:applicationFrame viewController:self];
     [self.view addSubview:contentView];
+    [self.furnitureImages addObject:contentView];
 }
+
 
 @end
