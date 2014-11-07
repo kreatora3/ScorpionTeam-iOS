@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84105B121A0CFE2D008B646D /* RoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84105B111A0CFE2D008B646D /* RoomViewController.m */; };
 		84A10AA21A0CD13E00B527B3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A10AA11A0CD13E00B527B3 /* LoginViewController.m */; };
 		84A10AA51A0CD5EC00B527B3 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A10AA41A0CD5EC00B527B3 /* RegisterViewController.m */; };
 		84A4B70F1A0CBBB9003C7E5C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A4B70E1A0CBBB9003C7E5C /* main.m */; };
@@ -46,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		84105B101A0CFE2D008B646D /* RoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoomViewController.h; path = RoomDesigner/RoomViewController.h; sourceTree = "<group>"; };
+		84105B111A0CFE2D008B646D /* RoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RoomViewController.m; path = RoomDesigner/RoomViewController.m; sourceTree = "<group>"; };
 		84A10AA01A0CD13E00B527B3 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		84A10AA11A0CD13E00B527B3 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		84A10AA31A0CD5EC00B527B3 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
@@ -139,11 +142,6 @@
 		84A4B70B1A0CBBB9003C7E5C /* RoomDesigner */ = {
 			isa = PBXGroup;
 			children = (
-				84FB60261A0CF7E900D86407 /* TableView.h */,
-				84FB60271A0CF7E900D86407 /* TableView.m */,
-				84FB60281A0CF7E900D86407 /* TableViewCell.h */,
-				84FB60291A0CF7E900D86407 /* TableViewCell.m */,
-				84FB602A1A0CF7E900D86407 /* TableViewCell.xib */,
 				84A4B7101A0CBBB9003C7E5C /* AppDelegate.h */,
 				84A4B7111A0CBBB9003C7E5C /* AppDelegate.m */,
 				84A4B7161A0CBBB9003C7E5C /* ViewController.h */,
@@ -213,6 +211,13 @@
 		84A4B7511A0CBE63003C7E5C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				84105B101A0CFE2D008B646D /* RoomViewController.h */,
+				84105B111A0CFE2D008B646D /* RoomViewController.m */,
+				84FB60261A0CF7E900D86407 /* TableView.h */,
+				84FB60271A0CF7E900D86407 /* TableView.m */,
+				84FB60281A0CF7E900D86407 /* TableViewCell.h */,
+				84FB60291A0CF7E900D86407 /* TableViewCell.m */,
+				84FB602A1A0CF7E900D86407 /* TableViewCell.xib */,
 				84A10AA01A0CD13E00B527B3 /* LoginViewController.h */,
 				84A10AA11A0CD13E00B527B3 /* LoginViewController.m */,
 				84A10AA31A0CD5EC00B527B3 /* RegisterViewController.h */,
@@ -323,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84A4B7121A0CBBB9003C7E5C /* AppDelegate.m in Sources */,
+				84105B121A0CFE2D008B646D /* RoomViewController.m in Sources */,
 				84A10AA51A0CD5EC00B527B3 /* RegisterViewController.m in Sources */,
 				84A4B7151A0CBBB9003C7E5C /* RoomDesigner.xcdatamodeld in Sources */,
 				84FB602B1A0CF7E900D86407 /* TableView.m in Sources */,
