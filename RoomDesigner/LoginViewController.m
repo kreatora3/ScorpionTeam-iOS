@@ -8,7 +8,8 @@
 
 #import "LoginViewController.h"
 #import "Parse/Parse.h"
-
+#import "RoomViewController.h"
+#import "Alert.h"
 @interface LoginViewController ()
 
 @end
@@ -19,23 +20,22 @@
     
     NSString *username = self.username.text;
     NSString *password = self.password.text;
-    
+
     [PFUser logInWithUsernameInBackground:username password:password
-                                    block:^(PFUser *user, NSError *error) {
-                                        if (user) {
-                                            [self alertMessage:@"Succesfull login."];
-                                            //[self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:3] animated:YES];
-                                            // todo clear segue and manual
-                                        } else {
-                                            // The login failed. Check error to see why.
-                                            //NSString *errorString = [error userInfo][@"error"];
-                                            [self alertMessage:[NSString stringWithFormat:@"Login failed"]];
-                                            // todo return to login
-                                        }
-                                    }];
-    
-    [self.username resignFirstResponder];
-}
+                                        block:^(PFUser *user, NSError *error) {
+                                            if (user) {
+                                                RoomViewController *loginVC = [self.storyboard instantiateViewControllerWithIdentifier:@"login"];
+                                                [self.navigationController pushViewController:loginVC animated:YES];
+                                                
+                                            }
+                                            else{
+                                                [Alert alertWith:@"Error occured!" message:@"Wrong username or password" andButton:@"OK"];
+                                            }
+                                        }];
+        
+        [self.username resignFirstResponder];
+    }
+
 
 
 - (void)viewDidLoad {
@@ -47,14 +47,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
--(void)alertMessage:(NSString*)message {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert"
-                                                    message: message
-                                                   delegate:self
-                                          cancelButtonTitle:@"OK"
-                                          otherButtonTitles: nil];
-    [alert show];
-}
+
 
 
 @end

@@ -8,6 +8,8 @@
 
 #import "RegisterViewController.h"
 #import "Parse/Parse.h"
+#import "RoomViewController.h"
+#import "Alert.h"
 
 @interface RegisterViewController ()
 
@@ -19,18 +21,39 @@
 }
 
 - (void)registerMethod {
-    PFUser *user = [PFUser user];
-    user.username = self.username.text;
-    user.password = self.password.text;
+    NSString *userName = self.username.text;
+    NSString *password = self.password.text;
     
-    [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (!error) {
-            [self alertMessage:@"You are registered!!!"];
-        } else {
-            NSString *errorString = [error userInfo][@"error"];
-            [self alertMessage:errorString];
-        }
-    }];
+    if(userName == nil || userName.length < 3){
+        [Alert alertWith:@"Invalid username"
+                        message:@"Username must be at least 3 characters"
+                      andButton:@"OK"];
+        
+    }
+    else if(password == nil || password.length < 6){
+        [Alert alertWith:@"Invalid password"
+                        message:@"Password must be at least 5 characters"
+                      andButton:@"OK"];
+        
+    }
+    else{
+        
+        PFUser *user = [PFUser user];
+        user.username = self.username.text;
+        user.password = self.password.text;
+        
+        [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            if (!error) {
+                RoomViewController *regVC = [self.storyboard instantiateViewControllerWithIdentifier:@"toRoomVC"];
+                [self.navigationController pushViewController:regVC animated:YES];        }
+            else {
+//                [Alert alertWith:@"Register failed"
+//                         message:@"Error!"
+//                       andButton:@"OK"];
+
+            }
+        }];}
+    
 }
 
 - (void)viewDidLoad {
@@ -43,12 +66,5 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)alertMessage:(NSString*)message {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert"
-                                                    message: message
-                                                   delegate:self
-                                          cancelButtonTitle:@"OK"
-                                          otherButtonTitles: nil];
-    [alert show];
-}
+
 @end
