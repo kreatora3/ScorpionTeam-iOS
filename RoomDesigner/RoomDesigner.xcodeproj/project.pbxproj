@@ -35,7 +35,6 @@
 		84A4B74C1A0CBD16003C7E5C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A4B7421A0CBD15003C7E5C /* Security.framework */; };
 		84A4B74D1A0CBD16003C7E5C /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A4B7431A0CBD15003C7E5C /* StoreKit.framework */; };
 		84A4B74E1A0CBD16003C7E5C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A4B7441A0CBD16003C7E5C /* SystemConfiguration.framework */; };
-		84FB602B1A0CF7E900D86407 /* TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FB60271A0CF7E900D86407 /* TableView.m */; };
 		84FB602C1A0CF7E900D86407 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FB60291A0CF7E900D86407 /* TableViewCell.m */; };
 		84FB602D1A0CF7E900D86407 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84FB602A1A0CF7E900D86407 /* TableViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -90,8 +89,6 @@
 		84A4B7421A0CBD15003C7E5C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		84A4B7431A0CBD15003C7E5C /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		84A4B7441A0CBD16003C7E5C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		84FB60261A0CF7E900D86407 /* TableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableView.h; sourceTree = SOURCE_ROOT; };
-		84FB60271A0CF7E900D86407 /* TableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableView.m; sourceTree = SOURCE_ROOT; };
 		84FB60281A0CF7E900D86407 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = SOURCE_ROOT; };
 		84FB60291A0CF7E900D86407 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = SOURCE_ROOT; };
 		84FB602A1A0CF7E900D86407 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = SOURCE_ROOT; };
@@ -237,8 +234,6 @@
 			children = (
 				84105B101A0CFE2D008B646D /* RoomViewController.h */,
 				84105B111A0CFE2D008B646D /* RoomViewController.m */,
-				84FB60261A0CF7E900D86407 /* TableView.h */,
-				84FB60271A0CF7E900D86407 /* TableView.m */,
 				84FB60281A0CF7E900D86407 /* TableViewCell.h */,
 				84FB60291A0CF7E900D86407 /* TableViewCell.m */,
 				84FB602A1A0CF7E900D86407 /* TableViewCell.xib */,
@@ -359,7 +354,6 @@
 				849EA8801A0EC6C400E14DE6 /* Alert.m in Sources */,
 				84A10AA51A0CD5EC00B527B3 /* RegisterViewController.m in Sources */,
 				84A4B7151A0CBBB9003C7E5C /* RoomDesigner.xcdatamodeld in Sources */,
-				84FB602B1A0CF7E900D86407 /* TableView.m in Sources */,
 				84A4B7181A0CBBB9003C7E5C /* ViewController.m in Sources */,
 				84FB602C1A0CF7E900D86407 /* TableViewCell.m in Sources */,
 				84A4B70F1A0CBBB9003C7E5C /* main.m in Sources */,
