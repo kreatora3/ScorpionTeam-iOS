@@ -17,7 +17,7 @@
 @implementation LoginViewController
 
 - (IBAction)login:(id)sender {
-    
+    NSLog(@"asdkaf");
     NSString *username = self.username.text;
     NSString *password = self.password.text;
 
