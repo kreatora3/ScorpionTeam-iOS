@@ -44,7 +44,7 @@
         
         [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             if (!error) {
-                RoomViewController *regVC = [self.storyboard instantiateViewControllerWithIdentifier:@"toRoomVC"];
+                RoomViewController *regVC = [self.storyboard instantiateViewControllerWithIdentifier:@"roomView"];
                 [self.navigationController pushViewController:regVC animated:YES];        }
             else {
 //                [Alert alertWith:@"Register failed"

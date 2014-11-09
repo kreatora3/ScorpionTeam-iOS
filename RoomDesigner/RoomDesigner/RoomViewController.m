@@ -180,7 +180,7 @@ static NSString* cellIdentifier=@"TableViewCell";
     UIImage* cellData=imageDetails.image;
     
     
-    CGRect applicationFrame= CGRectMake (self.view.frame.origin.x, self.view.frame.origin.y,cellData.size.width/2, cellData.size.height/2);
+    CGRect applicationFrame= CGRectMake (self.view.frame.origin.x, self.view.frame.origin.y+50,cellData.size.width/2, cellData.size.height/2);
     
     NSLog(@"%f",cellData.size.width);
     UIImageView *contentView = [[UIImageView alloc] initWithFrame:applicationFrame];
