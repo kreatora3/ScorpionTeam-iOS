@@ -30,14 +30,6 @@ static NSString* cellIdentifier=@"TableViewCell";
     _furnitureImages =[[NSMutableArray alloc] init];
     UINib* nib = [UINib nibWithNibName:cellIdentifier bundle:nil];
     [self.table registerNib:nib forCellReuseIdentifier:cellIdentifier];
-    // Initialization code
-    ImageWithTitle *image = [[ImageWithTitle alloc] init];
-    image.name = @"John";
-    UIImage* pic = [UIImage imageNamed:@"img1.jpeg"];
-    image.image=pic;
-    /*for(int i=0; i<10;i++){
-        [_content addObject:image];
-    }*/
     
     
     [self.table setDelegate:self];
@@ -75,7 +67,14 @@ static NSString* cellIdentifier=@"TableViewCell";
                // NSLog(@"%@", object.objectId);
                 NSLog(@"%@",imageData);
                 UIImage *image =[UIImage imageWithData:imageData];
-                [_content addObject:image];
+                ImageWithTitle* entry=[[ImageWithTitle alloc] init];
+                entry.image=image;
+                NSString* name=object[@"name"];
+                NSString* store=object[@"store"];
+               entry.name=name;
+                entry.storeName=store;
+                
+                [_content addObject:entry];
             }
            
                 [self.table reloadData];
@@ -129,14 +128,19 @@ static NSString* cellIdentifier=@"TableViewCell";
 
 - (IBAction)pan:(UIPanGestureRecognizer *)sender {
     CGPoint location=[sender locationInView:self.view];
-
+    BOOL isInPic=NO;
     for (UIImageView *furniture in self.furnitureImages) {
         CGRect rect= CGRectMake(furniture.frame.origin.x, furniture.frame.origin.y, furniture.frame.size.width, furniture.frame.size.height);
-        if(location.x>rect.origin.x&location.x<(rect.origin.x+rect.size.width)&location.y>rect.origin.y&location.y<(rect.origin.y+rect.size.height)){
+        if(location.x>rect.origin.x&location.x<(rect.origin.x+rect.size.width)&location.y>rect.origin.y&location.y<(rect.origin.y+rect.size.height)&!isInPic){
             
             CGRect newLocation= CGRectMake(location.x-rect.size.width/2, location.y-rect.size.height/2, rect.size.width, rect.size.height);
             furniture.frame=newLocation;
              NSLog(@"%f",location.x);
+            isInPic=YES;
+            
+        }
+        else{
+            isInPic=NO;
         }
     }
    
@@ -157,6 +161,7 @@ static NSString* cellIdentifier=@"TableViewCell";
     TableViewCell *cell =[tableView dequeueReusableCellWithIdentifier:cellIdentifier ];
     NSLog(@"created");
     
+    ImageWithTitle *imageDetails =[_content objectAtIndex:indexPath.row];
     //cell.label.text = [_content objectAtIndex:indexPath.row];
    // ImageWithTitle* cellData=[_content objectAtIndex:indexPath.row];
     //cell.label.text=cellData.name;
@@ -165,13 +170,14 @@ static NSString* cellIdentifier=@"TableViewCell";
    // NSData *imageData=object[@"image"];
     //NSString *name=object[@"name"];
     //UIImage* image= [UIImage imageWithData:imageData];
-    cell.productImage.image=[_content objectAtIndex:indexPath.row];
-    //cell.label.text= name;
+    cell.productImage.image=imageDetails.image;
+    cell.label.text=imageDetails.name;
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    UIImage* cellData=[_content objectAtIndex:indexPath.row];
+    ImageWithTitle *imageDetails =[_content objectAtIndex:indexPath.row];
+    UIImage* cellData=imageDetails.image;
     
     
     CGRect applicationFrame= CGRectMake (self.view.frame.origin.x, self.view.frame.origin.y,cellData.size.width/2, cellData.size.height/2);

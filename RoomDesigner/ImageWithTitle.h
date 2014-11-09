@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ImageWithTitle:UIImageView
-@property (weak, nonatomic) NSString* name;
+@interface ImageWithTitle:NSObject
+@property (strong, nonatomic) NSString* name;
+@property (strong,nonatomic) UIImage* image;
+@property (strong,nonatomic) NSString* storeName;
 @end
