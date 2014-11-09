@@ -24,7 +24,7 @@ static NSString* cellIdentifier=@"TableViewCell";
     [super viewDidLoad];
     //_content = [[NSMutableArray alloc] initWithObjects:@"John",@"Ron",@"Don",@"Shawn",@"Ion",@"Gaston",@"Tron", nil];
     _content=[[NSMutableArray alloc] init];
-    [self parseImagesWithKey:@"room"];
+    [self parseImagesWithKey:@"chests-tables"];
     //[self parseImages];
     //_content=[[NSMutableArray alloc] init];
     _furnitureImages =[[NSMutableArray alloc] init];
@@ -70,9 +70,9 @@ static NSString* cellIdentifier=@"TableViewCell";
                 ImageWithTitle* entry=[[ImageWithTitle alloc] init];
                 entry.image=image;
                 NSString* name=object[@"name"];
-                NSString* store=object[@"store"];
+                //NSString* store=object[@"store"];
                entry.name=name;
-                entry.storeName=store;
+                //entry.storeName=store;
                 
                 [_content addObject:entry];
             }
@@ -93,7 +93,7 @@ static NSString* cellIdentifier=@"TableViewCell";
     {
         //implement changing datasource for table
        _content=[[NSMutableArray alloc] init];
-        [self parseImagesWithKey:@"room"];
+        [self parseImagesWithKey:@"chests-tables"];
         //self.view.backgroundColor = [UIColor redColor];          // Change the background color to red
         
     }
@@ -105,7 +105,7 @@ static NSString* cellIdentifier=@"TableViewCell";
         {
             
             _content=[[NSMutableArray alloc] init];
-            [self parseImagesWithKey:@"kitchen"];
+            [self parseImagesWithKey:@"lamp"];
            
             //implement changing datasource for table
             //self.view.backgroundColor = [UIColor greenColor];
@@ -118,7 +118,7 @@ static NSString* cellIdentifier=@"TableViewCell";
                 
             {
                 _content=[[NSMutableArray alloc] init];
-                [self parseImagesWithKey:@"bathroom"];
+                [self parseImagesWithKey:@"bed-sofa"];
                 //implement changing datasource for table
                 //self.view.backgroundColor = [UIColor blueColor];
                 

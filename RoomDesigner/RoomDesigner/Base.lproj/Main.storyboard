@@ -339,9 +339,9 @@
                                     <constraint firstAttribute="width" constant="250" id="s8N-o4-RoJ"/>
                                 </constraints>
                                 <segments>
-                                    <segment title="Room"/>
-                                    <segment title="Kitchen"/>
-                                    <segment title="Bathroom"/>
+                                    <segment title="tables"/>
+                                    <segment title="lamps"/>
+                                    <segment title="sofa&amp;bed"/>
                                 </segments>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -387,7 +387,7 @@
                                     </mask>
                                 </variation>
                             </tableView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty-room.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ot0-Gb-BnH">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Empty Room.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ot0-Gb-BnH">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -526,6 +526,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="empty-room.jpg" width="410" height="293"/>
+        <image name="Empty Room.jpg" width="1600" height="869"/>
     </resources>
 </document>
