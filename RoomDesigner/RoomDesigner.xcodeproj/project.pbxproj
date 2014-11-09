@@ -13,7 +13,6 @@
 		84105B1A1A0D1DD5008B646D /* img2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 84105B181A0D1DD5008B646D /* img2.jpeg */; };
 		84A10AA21A0CD13E00B527B3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A10AA11A0CD13E00B527B3 /* LoginViewController.m */; };
 		84A10AA51A0CD5EC00B527B3 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A10AA41A0CD5EC00B527B3 /* RegisterViewController.m */; };
-		84A10AA81A0D0ECA00B527B3 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A10AA71A0D0ECA00B527B3 /* Item.m */; };
 		84A4B70F1A0CBBB9003C7E5C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A4B70E1A0CBBB9003C7E5C /* main.m */; };
 		84A4B7121A0CBBB9003C7E5C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A4B7111A0CBBB9003C7E5C /* AppDelegate.m */; };
 		84A4B7151A0CBBB9003C7E5C /* RoomDesigner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84A4B7131A0CBBB9003C7E5C /* RoomDesigner.xcdatamodeld */; };
@@ -35,7 +34,6 @@
 		84A4B74C1A0CBD16003C7E5C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A4B7421A0CBD15003C7E5C /* Security.framework */; };
 		84A4B74D1A0CBD16003C7E5C /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A4B7431A0CBD15003C7E5C /* StoreKit.framework */; };
 		84A4B74E1A0CBD16003C7E5C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A4B7441A0CBD16003C7E5C /* SystemConfiguration.framework */; };
-		84A6940E1A0D88AC00E00155 /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A6940D1A0D88AC00E00155 /* Store.m */; };
 		84FB602B1A0CF7E900D86407 /* TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FB60271A0CF7E900D86407 /* TableView.m */; };
 		84FB602C1A0CF7E900D86407 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FB60291A0CF7E900D86407 /* TableViewCell.m */; };
 		84FB602D1A0CF7E900D86407 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84FB602A1A0CF7E900D86407 /* TableViewCell.xib */; };
@@ -62,8 +60,6 @@
 		84A10AA11A0CD13E00B527B3 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		84A10AA31A0CD5EC00B527B3 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		84A10AA41A0CD5EC00B527B3 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
-		84A10AA61A0D0ECA00B527B3 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Item.h; path = ../../../../Documents/Item.h; sourceTree = "<group>"; };
-		84A10AA71A0D0ECA00B527B3 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Item.m; path = ../../../../Documents/Item.m; sourceTree = "<group>"; };
 		84A4B7091A0CBBB9003C7E5C /* RoomDesigner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoomDesigner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A4B70D1A0CBBB9003C7E5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84A4B70E1A0CBBB9003C7E5C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -91,8 +87,6 @@
 		84A4B7421A0CBD15003C7E5C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		84A4B7431A0CBD15003C7E5C /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		84A4B7441A0CBD16003C7E5C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		84A6940C1A0D88AC00E00155 /* Store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Store.h; sourceTree = "<group>"; };
-		84A6940D1A0D88AC00E00155 /* Store.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Store.m; sourceTree = "<group>"; };
 		84FB60261A0CF7E900D86407 /* TableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableView.h; sourceTree = SOURCE_ROOT; };
 		84FB60271A0CF7E900D86407 /* TableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableView.m; sourceTree = SOURCE_ROOT; };
 		84FB60281A0CF7E900D86407 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = SOURCE_ROOT; };
@@ -227,12 +221,8 @@
 		84A4B7501A0CBE50003C7E5C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				84A10AA61A0D0ECA00B527B3 /* Item.h */,
-				84A10AA71A0D0ECA00B527B3 /* Item.m */,
 				84105B131A0D1A6F008B646D /* ImageWithTitle.h */,
 				84105B141A0D1A6F008B646D /* ImageWithTitle.m */,
-				84A6940C1A0D88AC00E00155 /* Store.h */,
-				84A6940D1A0D88AC00E00155 /* Store.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -358,10 +348,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84A10AA81A0D0ECA00B527B3 /* Item.m in Sources */,
 				84105B151A0D1A6F008B646D /* ImageWithTitle.m in Sources */,
 				84A4B7121A0CBBB9003C7E5C /* AppDelegate.m in Sources */,
-				84A6940E1A0D88AC00E00155 /* Store.m in Sources */,
 				84105B121A0CFE2D008B646D /* RoomViewController.m in Sources */,
 				84A10AA51A0CD5EC00B527B3 /* RegisterViewController.m in Sources */,
 				84A4B7151A0CBBB9003C7E5C /* RoomDesigner.xcdatamodeld in Sources */,

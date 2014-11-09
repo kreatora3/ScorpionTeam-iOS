@@ -25,7 +25,6 @@
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tVK-Fd-qrm">
                         <rect key="frame" x="75" y="2" width="124" height="86"/>
-                        <color key="backgroundColor" red="1" green="0.82068499660000005" blue="0.9836571462" alpha="1" colorSpace="calibratedRGB"/>
                     </imageView>
                 </subviews>
                 <constraints>

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "TableView.h"
+#import <Parse/Parse.h>
 
 @interface RoomViewController : UIViewController
 @property (nonatomic, strong)NSMutableArray *content;

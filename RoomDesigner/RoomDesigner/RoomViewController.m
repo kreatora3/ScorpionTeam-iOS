@@ -18,11 +18,15 @@
 
 static NSString* cellIdentifier=@"TableViewCell";
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     //_content = [[NSMutableArray alloc] initWithObjects:@"John",@"Ron",@"Don",@"Shawn",@"Ion",@"Gaston",@"Tron", nil];
     _content=[[NSMutableArray alloc] init];
-    
+    [self parseImagesWithKey:@"room"];
+    //[self parseImages];
+    //_content=[[NSMutableArray alloc] init];
     _furnitureImages =[[NSMutableArray alloc] init];
     UINib* nib = [UINib nibWithNibName:cellIdentifier bundle:nil];
     [self.table registerNib:nib forCellReuseIdentifier:cellIdentifier];
@@ -31,9 +35,9 @@ static NSString* cellIdentifier=@"TableViewCell";
     image.name = @"John";
     UIImage* pic = [UIImage imageNamed:@"img1.jpeg"];
     image.image=pic;
-    for(int i=0; i<10;i++){
+    /*for(int i=0; i<10;i++){
         [_content addObject:image];
-    }
+    }*/
     
     
     [self.table setDelegate:self];
@@ -56,13 +60,42 @@ static NSString* cellIdentifier=@"TableViewCell";
 }
 */
 
+-(void) parseImagesWithKey: (NSString *) key{
+    PFQuery *query = [PFQuery queryWithClassName:@"Item"];
+    [query whereKey:@"type" equalTo:key];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            // The find succeeded.
+            NSLog(@"Successfully retrieved %ld scores.", objects.count);
+            // Do something with the found objects
+            for (PFObject *object in objects) {
+                
+                PFFile* picture=object[@"image"];
+                NSData *imageData=[picture getData];
+               // NSLog(@"%@", object.objectId);
+                NSLog(@"%@",imageData);
+                UIImage *image =[UIImage imageWithData:imageData];
+                [_content addObject:image];
+            }
+           
+                [self.table reloadData];
+            
+        } else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
+
+}
+
 - (IBAction)sample:(id)sender {
     if(_sampler.selectedSegmentIndex == 0)            // Checking which segment is selected using the segment index value
         
     {
         //implement changing datasource for table
-        
-        self.view.backgroundColor = [UIColor redColor];          // Change the background color to red
+       _content=[[NSMutableArray alloc] init];
+        [self parseImagesWithKey:@"room"];
+        //self.view.backgroundColor = [UIColor redColor];          // Change the background color to red
         
     }
     
@@ -71,8 +104,12 @@ static NSString* cellIdentifier=@"TableViewCell";
         if(_sampler.selectedSegmentIndex == 1)
             
         {
+            
+            _content=[[NSMutableArray alloc] init];
+            [self parseImagesWithKey:@"kitchen"];
+           
             //implement changing datasource for table
-            self.view.backgroundColor = [UIColor greenColor];
+            //self.view.backgroundColor = [UIColor greenColor];
             
         }
     
@@ -81,8 +118,10 @@ static NSString* cellIdentifier=@"TableViewCell";
             if(_sampler.selectedSegmentIndex == 2)
                 
             {
+                _content=[[NSMutableArray alloc] init];
+                [self parseImagesWithKey:@"bathroom"];
                 //implement changing datasource for table
-                self.view.backgroundColor = [UIColor blueColor];
+                //self.view.backgroundColor = [UIColor blueColor];
                 
             }
     
@@ -119,22 +158,27 @@ static NSString* cellIdentifier=@"TableViewCell";
     NSLog(@"created");
     
     //cell.label.text = [_content objectAtIndex:indexPath.row];
-    ImageWithTitle* cellData=[_content objectAtIndex:indexPath.row];
-    cell.label.text=cellData.name;
-    cell.productImage.image=cellData.image;
-    
+   // ImageWithTitle* cellData=[_content objectAtIndex:indexPath.row];
+    //cell.label.text=cellData.name;
+    //cell.productImage.image=cellData.image;
+   // PFObject *object =[_content objectAtIndex:indexPath.row];
+   // NSData *imageData=object[@"image"];
+    //NSString *name=object[@"name"];
+    //UIImage* image= [UIImage imageWithData:imageData];
+    cell.productImage.image=[_content objectAtIndex:indexPath.row];
+    //cell.label.text= name;
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    ImageWithTitle* cellData=[_content objectAtIndex:indexPath.row];
+    UIImage* cellData=[_content objectAtIndex:indexPath.row];
     
     
-    CGRect applicationFrame= CGRectMake (self.view.frame.origin.x, self.view.frame.origin.y,cellData.image.size.width/2, cellData.image.size.height/2);
+    CGRect applicationFrame= CGRectMake (self.view.frame.origin.x, self.view.frame.origin.y,cellData.size.width/2, cellData.size.height/2);
     
-    NSLog(@"%f",cellData.image.size.width);
+    NSLog(@"%f",cellData.size.width);
     UIImageView *contentView = [[UIImageView alloc] initWithFrame:applicationFrame];
-    contentView.image=cellData.image;
+    contentView.image=cellData;
     //self.view = contentView;
     //levelView = [[LevelView alloc] initWithFrame:applicationFrame viewController:self];
     [self.view addSubview:contentView];
