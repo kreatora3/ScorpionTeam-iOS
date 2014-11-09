@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="p8e-3T-IKG">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
@@ -24,6 +24,28 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxc-ng-ora">
+                                <rect key="frame" x="150" y="304" width="74" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="74" id="1wA-0x-esh"/>
+                                </constraints>
+                                <state key="normal" title="Register">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="1wA-0x-esh"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="1wA-0x-esh"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <segue destination="NBB-DH-vXO" kind="show" id="dtU-fh-e2k"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i6K-g5-Vke">
                                 <rect key="frame" x="133" y="66" width="118" height="21"/>
                                 <constraints>
@@ -62,6 +84,11 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H0r-EH-u0d">
+                                <rect key="frame" x="66" y="173" width="253" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gtx-ro-tff">
                                 <rect key="frame" x="164" y="239" width="46" height="30"/>
                                 <constraints>
@@ -82,34 +109,6 @@
                                 </variation>
                                 <connections>
                                     <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lqZ-9t-Qj4"/>
-                                    <segue destination="pp0-H3-QdQ" kind="show" identifier="login" id="dyy-DF-A7q"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H0r-EH-u0d">
-                                <rect key="frame" x="66" y="173" width="253" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxc-ng-ora">
-                                <rect key="frame" x="150" y="304" width="74" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="74" id="1wA-0x-esh"/>
-                                </constraints>
-                                <state key="normal" title="Register">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="1wA-0x-esh"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular">
-                                    <mask key="constraints">
-                                        <include reference="1wA-0x-esh"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <segue destination="NBB-DH-vXO" kind="show" id="dtU-fh-e2k"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -167,6 +166,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="zoF-8Z-Vcg"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="password" destination="H0r-EH-u0d" id="WUb-Jl-FH1"/>
@@ -175,7 +175,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="422.5" y="279.5"/>
+            <point key="canvasLocation" x="1234.5" y="279.375"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="qOL-8K-gjI">
@@ -257,7 +257,6 @@
                                 </variation>
                                 <connections>
                                     <action selector="registerBtn:" destination="NBB-DH-vXO" eventType="touchUpInside" id="eb2-9t-1Bg"/>
-                                    <segue destination="pp0-H3-QdQ" kind="show" identifier="toRoomVC" id="yXn-A8-ZVg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -313,16 +312,17 @@
                     <connections>
                         <outlet property="password" destination="H65-2A-YtP" id="BHs-ap-SI1"/>
                         <outlet property="username" destination="0nl-fb-lbg" id="gdN-54-RVV"/>
+                        <segue destination="pp0-H3-QdQ" kind="show" id="OgK-PY-sZm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e5r-7E-X2P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="864.5" y="279.5"/>
+            <point key="canvasLocation" x="1724.5" y="300.375"/>
         </scene>
         <!--Room View Controller-->
         <scene sceneID="EHH-Ia-lnR">
             <objects>
-                <viewController id="pp0-H3-QdQ" customClass="RoomViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="roomView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pp0-H3-QdQ" customClass="RoomViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nYC-3O-8lx"/>
                         <viewControllerLayoutGuide type="bottom" id="EDZ-fZ-3jy"/>
@@ -484,7 +484,7 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1262.5" y="279.375"/>
+            <point key="canvasLocation" x="2280" y="229.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="mfR-zd-USX">
@@ -502,10 +502,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x1q-xf-V7A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1694.5" y="279.375"/>
+            <point key="canvasLocation" x="3044" y="228.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QPs-MF-wLe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="p8e-3T-IKG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jsX-NG-mZm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Vz2-0P-yY7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tVl-1W-2CE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="745.5" y="278.625"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="dyy-DF-A7q"/>
-    </inferredMetricsTieBreakers>
 </document>

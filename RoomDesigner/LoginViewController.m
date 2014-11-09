@@ -17,14 +17,14 @@
 @implementation LoginViewController
 
 - (IBAction)login:(id)sender {
-    NSLog(@"asdkaf");
+    
     NSString *username = self.username.text;
     NSString *password = self.password.text;
 
     [PFUser logInWithUsernameInBackground:username password:password
                                         block:^(PFUser *user, NSError *error) {
                                             if (user) {
-                                                RoomViewController *loginVC = [self.storyboard instantiateViewControllerWithIdentifier:@"login"];
+                                                RoomViewController *loginVC = [self.storyboard instantiateViewControllerWithIdentifier:@"roomView"];
                                                 [self.navigationController pushViewController:loginVC animated:YES];
                                                 
                                             }
