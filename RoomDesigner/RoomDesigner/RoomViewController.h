@@ -10,6 +10,7 @@
 #import <Parse/Parse.h>
 
 @interface RoomViewController : UIViewController
+- (IBAction)longPress:(UILongPressGestureRecognizer *)sender;
 
 @property (nonatomic, strong)NSMutableArray *content;
 @property (strong, nonatomic) IBOutlet UITableView *table;

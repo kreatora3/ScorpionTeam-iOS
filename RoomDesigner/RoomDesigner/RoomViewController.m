@@ -216,4 +216,24 @@ static NSString* cellIdentifier=@"TableViewCell";
 }
 
 
+- (IBAction)longPress:(UILongPressGestureRecognizer *)sender {
+    CGPoint location=[sender locationInView:self.view];
+    BOOL isInPic=NO;
+    for (ImageWithTitle *furniture in self.furnitureImages) {
+        
+        CGRect rect= CGRectMake(furniture.image.frame.origin.x, furniture.image.frame.origin.y, furniture.image.frame.size.width, furniture.image.frame.size.height);
+        if(location.x>rect.origin.x&location.x<(rect.origin.x+rect.size.width)&location.y>rect.origin.y&location.y<(rect.origin.y+rect.size.height)&!isInPic){
+            
+            //NSPredicate *predicate =[NSPredicate predicateWithFormat:@"name not %@", furniture.name];
+            
+           
+           // self.furnitureImages = (NSMutableArray *)[self.furnitureImages filteredArrayUsingPredicate:predicate];
+           [furniture.image removeFromSuperview];
+            
+        }
+        else{
+            isInPic=NO;
+        }
+    }
+}
 @end
