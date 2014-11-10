@@ -14,47 +14,36 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1gb-P0-Y2S">
+                        <rect key="frame" x="137" y="3" width="134" height="87"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="134" id="Q8y-wJ-MrB"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="age-Nf-H4b">
                         <rect key="frame" x="19" y="0.0" width="110" height="98"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="110" id="qES-zx-5Fy"/>
+                            <constraint firstAttribute="width" constant="110" id="TOt-WB-ihS"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1gb-P0-Y2S">
-                        <rect key="frame" x="159" y="8" width="350" height="30"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZX-Oz-jLq">
-                        <rect key="frame" x="159" y="60" width="350" height="30"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="30" id="0Bf-ND-qBy"/>
-                            <constraint firstAttribute="width" constant="350" id="pUa-nl-oxF"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="1gb-P0-Y2S" firstAttribute="leading" secondItem="sZX-Oz-jLq" secondAttribute="leading" id="0HL-Bb-p8z"/>
-                    <constraint firstItem="1gb-P0-Y2S" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="58G-bp-1lI"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="sZX-Oz-jLq" secondAttribute="bottom" constant="-1" id="8BB-Td-Yzc"/>
-                    <constraint firstItem="sZX-Oz-jLq" firstAttribute="leading" secondItem="age-Nf-H4b" secondAttribute="trailing" constant="30" id="JYD-sv-dNf"/>
-                    <constraint firstItem="sZX-Oz-jLq" firstAttribute="top" secondItem="1gb-P0-Y2S" secondAttribute="bottom" constant="22" id="VcC-B7-3ZC"/>
-                    <constraint firstItem="1gb-P0-Y2S" firstAttribute="trailing" secondItem="sZX-Oz-jLq" secondAttribute="trailing" id="Vmw-bY-Wxg"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="age-Nf-H4b" secondAttribute="bottom" constant="-9" id="WHa-fD-bQv"/>
-                    <constraint firstItem="age-Nf-H4b" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="11" id="cDV-3l-SRu"/>
-                    <constraint firstItem="age-Nf-H4b" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="nVg-2V-fUd"/>
+                    <constraint firstItem="1gb-P0-Y2S" firstAttribute="leading" secondItem="age-Nf-H4b" secondAttribute="trailing" constant="8" symbolic="YES" id="EAz-lP-IOD"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="1gb-P0-Y2S" secondAttribute="bottom" constant="-1" id="jkK-zd-gvb"/>
+                    <constraint firstItem="age-Nf-H4b" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="11" id="nXo-DG-9Vf"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="age-Nf-H4b" secondAttribute="bottom" constant="-9" id="pz7-yC-ywC"/>
+                    <constraint firstItem="age-Nf-H4b" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="rhy-Lm-bY7"/>
+                    <constraint firstItem="1gb-P0-Y2S" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-5" id="yBf-o0-i46"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="image" destination="age-Nf-H4b" id="FsQ-He-qmW"/>
                 <outlet property="name" destination="1gb-P0-Y2S" id="522-3G-hSN"/>
-                <outlet property="store" destination="sZX-Oz-jLq" id="Su0-Oc-H31"/>
             </connections>
-            <point key="canvasLocation" x="176" y="179"/>
+            <point key="canvasLocation" x="176" y="175"/>
         </tableViewCell>
     </objects>
 </document>

@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface FinalTableViewCell : UITableViewCell
 @property (strong, nonatomic) IBOutlet UIImageView *image;
 @property (strong, nonatomic) IBOutlet UILabel *name;
-@property (strong, nonatomic) IBOutlet UILabel *store;
+
 
 @end
