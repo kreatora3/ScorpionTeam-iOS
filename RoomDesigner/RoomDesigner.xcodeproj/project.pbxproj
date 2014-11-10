@@ -14,6 +14,9 @@
 		8449AB531A102441000DCD57 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 8449AB501A102441000DCD57 /* background.png */; };
 		8449AB541A102441000DCD57 /* Empty Room.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8449AB511A102441000DCD57 /* Empty Room.jpg */; };
 		8449AB551A102441000DCD57 /* empty-room.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8449AB521A102441000DCD57 /* empty-room.jpg */; };
+		8449AB581A103292000DCD57 /* FinalTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8449AB571A103292000DCD57 /* FinalTableViewController.m */; };
+		8449AB5C1A1032D9000DCD57 /* FinalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8449AB5A1A1032D9000DCD57 /* FinalTableViewCell.m */; };
+		8449AB5D1A1032D9000DCD57 /* FinalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8449AB5B1A1032D9000DCD57 /* FinalTableViewCell.xib */; };
 		849EA8801A0EC6C400E14DE6 /* Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = 849EA87F1A0EC6C400E14DE6 /* Alert.m */; };
 		84A10AA21A0CD13E00B527B3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A10AA11A0CD13E00B527B3 /* LoginViewController.m */; };
 		84A10AA51A0CD5EC00B527B3 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A10AA41A0CD5EC00B527B3 /* RegisterViewController.m */; };
@@ -62,6 +65,11 @@
 		8449AB501A102441000DCD57 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		8449AB511A102441000DCD57 /* Empty Room.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Empty Room.jpg"; sourceTree = "<group>"; };
 		8449AB521A102441000DCD57 /* empty-room.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "empty-room.jpg"; sourceTree = "<group>"; };
+		8449AB561A103292000DCD57 /* FinalTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinalTableViewController.h; sourceTree = "<group>"; };
+		8449AB571A103292000DCD57 /* FinalTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinalTableViewController.m; sourceTree = "<group>"; };
+		8449AB591A1032D9000DCD57 /* FinalTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinalTableViewCell.h; sourceTree = "<group>"; };
+		8449AB5A1A1032D9000DCD57 /* FinalTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinalTableViewCell.m; sourceTree = "<group>"; };
+		8449AB5B1A1032D9000DCD57 /* FinalTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FinalTableViewCell.xib; sourceTree = "<group>"; };
 		849EA87E1A0EC6C400E14DE6 /* Alert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alert.h; sourceTree = "<group>"; };
 		849EA87F1A0EC6C400E14DE6 /* Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alert.m; sourceTree = "<group>"; };
 		84A10AA01A0CD13E00B527B3 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -250,6 +258,11 @@
 				84A10AA11A0CD13E00B527B3 /* LoginViewController.m */,
 				84A10AA31A0CD5EC00B527B3 /* RegisterViewController.h */,
 				84A10AA41A0CD5EC00B527B3 /* RegisterViewController.m */,
+				8449AB561A103292000DCD57 /* FinalTableViewController.h */,
+				8449AB571A103292000DCD57 /* FinalTableViewController.m */,
+				8449AB591A1032D9000DCD57 /* FinalTableViewCell.h */,
+				8449AB5A1A1032D9000DCD57 /* FinalTableViewCell.m */,
+				8449AB5B1A1032D9000DCD57 /* FinalTableViewCell.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -340,6 +353,7 @@
 				8449AB551A102441000DCD57 /* empty-room.jpg in Resources */,
 				8449AB531A102441000DCD57 /* background.png in Resources */,
 				84105B1A1A0D1DD5008B646D /* img2.jpeg in Resources */,
+				8449AB5D1A1032D9000DCD57 /* FinalTableViewCell.xib in Resources */,
 				84FB602D1A0CF7E900D86407 /* TableViewCell.xib in Resources */,
 				84A4B7201A0CBBBA003C7E5C /* LaunchScreen.xib in Resources */,
 				84A4B71D1A0CBBBA003C7E5C /* Images.xcassets in Resources */,
@@ -361,8 +375,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				84105B151A0D1A6F008B646D /* ImageWithTitle.m in Sources */,
+				8449AB581A103292000DCD57 /* FinalTableViewController.m in Sources */,
 				84A4B7121A0CBBB9003C7E5C /* AppDelegate.m in Sources */,
 				84105B121A0CFE2D008B646D /* RoomViewController.m in Sources */,
+				8449AB5C1A1032D9000DCD57 /* FinalTableViewCell.m in Sources */,
 				849EA8801A0EC6C400E14DE6 /* Alert.m in Sources */,
 				84A10AA51A0CD5EC00B527B3 /* RegisterViewController.m in Sources */,
 				84A4B7151A0CBBB9003C7E5C /* RoomDesigner.xcdatamodeld in Sources */,

@@ -10,6 +10,6 @@
 
 @interface ImageWithTitle:NSObject
 @property (strong, nonatomic) NSString* name;
-@property (strong,nonatomic) UIImage* image;
-@property (strong,nonatomic) NSString* storeName;
+@property (strong,nonatomic) UIImageView* image;
+@property (strong,nonatomic) NSString* ID;
 @end

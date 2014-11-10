@@ -10,6 +10,7 @@
 #import <Parse/Parse.h>
 
 @interface RoomViewController : UIViewController
+
 @property (nonatomic, strong)NSMutableArray *content;
 @property (strong, nonatomic) IBOutlet UITableView *table;
 @property (strong, nonatomic) IBOutlet UIImageView *image;

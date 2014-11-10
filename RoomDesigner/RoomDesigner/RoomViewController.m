@@ -9,6 +9,7 @@
 #import "RoomViewController.h"
 #import "TableViewCell.h"
 #import "ImageWithTitle.h"
+#import "FinalTableViewController.h"
 
 @interface RoomViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -68,11 +69,12 @@ static NSString* cellIdentifier=@"TableViewCell";
                 NSLog(@"%@",imageData);
                 UIImage *image =[UIImage imageWithData:imageData];
                 ImageWithTitle* entry=[[ImageWithTitle alloc] init];
-                entry.image=image;
+                UIImageView* imageView=[[UIImageView alloc] initWithImage:image];
+                entry.image=imageView;
                 NSString* name=object[@"name"];
-                //NSString* store=object[@"store"];
+                NSString* id=object[@"objectID"];
                entry.name=name;
-                //entry.storeName=store;
+                entry.ID=id;
                 
                 [_content addObject:entry];
             }
@@ -129,12 +131,13 @@ static NSString* cellIdentifier=@"TableViewCell";
 - (IBAction)pan:(UIPanGestureRecognizer *)sender {
     CGPoint location=[sender locationInView:self.view];
     BOOL isInPic=NO;
-    for (UIImageView *furniture in self.furnitureImages) {
-        CGRect rect= CGRectMake(furniture.frame.origin.x, furniture.frame.origin.y, furniture.frame.size.width, furniture.frame.size.height);
+    for (ImageWithTitle *furniture in self.furnitureImages) {
+        
+        CGRect rect= CGRectMake(furniture.image.frame.origin.x, furniture.image.frame.origin.y, furniture.image.frame.size.width, furniture.image.frame.size.height);
         if(location.x>rect.origin.x&location.x<(rect.origin.x+rect.size.width)&location.y>rect.origin.y&location.y<(rect.origin.y+rect.size.height)&!isInPic){
             
             CGRect newLocation= CGRectMake(location.x-rect.size.width/2, location.y-rect.size.height/2, rect.size.width, rect.size.height);
-            furniture.frame=newLocation;
+            furniture.image.frame=newLocation;
              NSLog(@"%f",location.x);
             isInPic=YES;
             
@@ -170,25 +173,46 @@ static NSString* cellIdentifier=@"TableViewCell";
    // NSData *imageData=object[@"image"];
     //NSString *name=object[@"name"];
     //UIImage* image= [UIImage imageWithData:imageData];
-    cell.productImage.image=imageDetails.image;
+    cell.productImage.image=imageDetails.image.image;
     cell.label.text=imageDetails.name;
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     ImageWithTitle *imageDetails =[_content objectAtIndex:indexPath.row];
-    UIImage* cellData=imageDetails.image;
+    UIImageView* cellData=imageDetails.image;
     
     
-    CGRect applicationFrame= CGRectMake (self.view.frame.origin.x, self.view.frame.origin.y+50,cellData.size.width/2, cellData.size.height/2);
+    CGRect applicationFrame= CGRectMake (self.view.frame.origin.x, self.view.frame.origin.y+50,cellData.image.size.width/2, cellData.image.size.height/2);
     
-    NSLog(@"%f",cellData.size.width);
+    //NSLog(@"%f",cellData.size.width);
     UIImageView *contentView = [[UIImageView alloc] initWithFrame:applicationFrame];
-    contentView.image=cellData;
+    contentView.image=cellData.image;
     //self.view = contentView;
     //levelView = [[LevelView alloc] initWithFrame:applicationFrame viewController:self];
+    
     [self.view addSubview:contentView];
-    [self.furnitureImages addObject:contentView];
+    ImageWithTitle *toSave =[[ImageWithTitle alloc] init];
+    toSave.image=contentView;
+    toSave.name=imageDetails.name;
+    toSave.ID=imageDetails.ID;
+    [self.furnitureImages addObject:toSave];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    if ([[segue identifier] isEqualToString:@"sendData"]) {
+        
+        // Get destination view
+        FinalTableViewController *vc = [segue destinationViewController];
+        
+        // Get button tag number (or do whatever you need to do here, based on your object
+        //NSInteger tagIndex = [(UIButton *)sender tag];
+        
+        // Pass the information to your destination view
+        vc.content=self.furnitureImages;
+    
+    }
 }
 
 
